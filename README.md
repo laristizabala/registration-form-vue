@@ -105,6 +105,7 @@ La arquitectura de este proyecto fue elegida para ser moderna, escalable y mante
 
 La estructura de carpetas está diseñada para separar claramente las responsabilidades:
 
+```
 /src
 |-- /components
 | |-- /icons #Iconos necesarios para mejora ui
@@ -129,3 +130,4 @@ La estructura de carpetas está diseñada para separar claramente las responsabi
 | |-- registrationStore.ts # Donde vivirá nuestro esquema Zod y tipos inferidos
 |-- App.vue # Contenedor principal
 |-- main.ts # Setup de Vue, Pinia, etc.
+```

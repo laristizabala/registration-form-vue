@@ -39,6 +39,11 @@ export const stepTwoSchema = z.object({
     phone: z.string().regex(/^\d+$/, 'Solo dígitos'),
     mobile: z.string().regex(/^\d+$/, 'Solo dígitos'),
 })
+
+export const stepTwoValidationSchema = stepTwoSchema.refine(d => d.password === d.confirmPassword, {
+    path: ['confirmPassword'],
+    message: 'Las contraseñas no coinciden',
+});
 export const stepThreeSchema = z.object({
     address: z.string().min(1, 'El campo es obligatorio'),
     zip: z.string().regex(/^\d+$/, 'Solo dígitos'),

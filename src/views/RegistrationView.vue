@@ -43,7 +43,7 @@ import { toTypedSchema } from '@vee-validate/zod'
 import useRegistrationFormStore from '@/store/registrationStore'
 import {
   stepOneSchema,
-  stepTwoSchema,
+  stepTwoValidationSchema,
   stepThreeSchema,
   RegisterSchema,
   type RegisterForm,
@@ -64,7 +64,7 @@ const showModal = ref(false)
 
 const currentSchema = computed(() => {
   if (currentStep.value === 1) return toTypedSchema(stepOneSchema)
-  if (currentStep.value === 2) return toTypedSchema(stepTwoSchema)
+  if (currentStep.value === 2) return toTypedSchema(stepTwoValidationSchema)
   return toTypedSchema(stepThreeSchema)
 })
 
