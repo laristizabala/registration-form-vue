@@ -4,10 +4,10 @@ Este proyecto es una implementación de un formulario de registro de 3 pasos, co
 
 ## 🔗 Url
 
-- [Registration form Url](https://alegra-image-race.netlify.app/)
+- [Registration form Url](https://registration-form-vue.netlify.app/)
 
 ```bash
-https://alegra-image-race.netlify.app/
+https://registration-form-vue.netlify.app/
 ```
 
 ## 🚀 Instalación y Ejecución
