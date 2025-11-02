@@ -2,7 +2,54 @@
 
 Este proyecto es una implementación de un formulario de registro de 3 pasos, construido como un reto técnico. La aplicación está desarrollada con **Vue 3 (Composition API)**, **TypeScript**, **Pinia** para la gestión de estado, **VeeValidate v4** + **Zod** para la validación de formularios, y **Tailwind CSS** para los estilos.
 
----
+## 🔗 Url
+
+- [Registration form Url](https://alegra-image-race.netlify.app/)
+
+```bash
+https://alegra-image-race.netlify.app/
+```
+
+## 🚀 Instalación y Ejecución
+
+Para descargar y ejecutar el proyecto, sigue los siguientes pasos:
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone <URL-del-repositorio>
+    cd nombre-del-proyecto
+    ```
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+3.  **Correr el proyecto en modo desarrollo:**
+    ```bash
+    npm run dev
+    ```
+4.  **Compilación para producción:**
+    ```bash
+    npm run build
+    ```
+
+## Lint con [ESLint](https://eslint.org/)
+
+```bash
+npm run lint
+```
+
+## IDE Setup Recomendado
+
+[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Navegador Recomendado
+
+- Chromium-based browsers (Chrome, Edge, Brave, etc.):
+  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
+- Firefox:
+  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
 ## 🚀 Características Principales
 
@@ -57,3 +104,28 @@ La arquitectura de este proyecto fue elegida para ser moderna, escalable y mante
 ## 📁 Distribución del Proyecto
 
 La estructura de carpetas está diseñada para separar claramente las responsabilidades:
+
+/src
+|-- /components
+| |-- /icons #Iconos necesarios para mejora ui
+| |-- /ui
+| | |-- BaseInput.vue # Componente genérico (maneja label, input, error, iconos)
+| | |-- BaseSelect.vue # Componente genérico para selects
+| | |-- BaseDate.vue # Wrapper para la librería de datepicker
+| | |-- BaseFile.vue # Input de archivo estilizado
+| | |-- BaseModal.vue # El modal de éxito (Req 4)
+| |-- /multiStepForm
+| | |-- StepOne.vue # Formulario del paso 1
+| | |-- StepTwo.vue # Formulario del paso 2
+| | |-- StepThree.vue # Formulario del paso 3
+| |-- StepperComponent.vue # La línea de tiempo visual (Req 2)
+|-- /composables
+| |-- useCountries.ts # Hook para fetchear y cachear la lista de países
+|-- /store
+| |-- registrationStore.ts # Store de Pinia (estado centralizado de formulario)
+|-- /utils #Funciones adicionales para validación
+|-- /schemas
+| |-- index.ts # Llamado centralizado a todos los esquemas
+| |-- registrationStore.ts # Donde vivirá nuestro esquema Zod y tipos inferidos
+|-- App.vue # Contenedor principal
+|-- main.ts # Setup de Vue, Pinia, etc.
